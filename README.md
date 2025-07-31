@@ -10,3 +10,17 @@ This website is for the public to officially sign up to a community run charity 
 | Store, sort, and filter data in database | Easy to use and navigate app/website |
 | Notify users and respond to user input | Informative, useful information |
 | Tutorial to app/website | Interactive elements; buttons, sliders, etc. |
+
+## Week 2, 31/07/25
+
+![Wireframe of website](Wireframe.png)
+
+The image includes several pages, including a Landing Page(top left), Home Page(bottom right), and Donate Page(bottom left).
+
+The colour palette I have chosen for my website uses shades of orange and yellow, warm colours usually associated with warmth, happiness, vitality, and friendly moods. 
+
+The use of rounded rectangles compared to sharp corners is to make the website feel more rounded and friendly. 
+
+The landing page has a button which leads to a sign up page which collects data from the person. This data is collected into a database which is used for future applications.
+
+In the home page, there is a 'Donate' button which leads to a donate page, which includes another form which asks about what the person will be donating. 
