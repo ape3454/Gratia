@@ -13,7 +13,7 @@ This website is for the public to officially sign up to a community run charity 
 
 ## Week 2, 31/07/25
 
-![Wireframe of website](Wireframe.png)
+![Wireframe of website](ReadMeImages/Wireframe.png)
 
 The image includes several pages, including a Landing Page(top left), Home Page(bottom right), and Donate Page(bottom left).
 
@@ -24,3 +24,13 @@ The use of rounded rectangles compared to sharp corners is to make the website f
 The landing page has a button which leads to a sign up page which collects data from the person. This data is collected into a database which is used for future applications.
 
 In the home page, there is a 'Donate' button which leads to a donate page, which includes another form which asks about what the person will be donating. 
+
+## Week 3, 08/08/25
+
+![Alternative wireframe of website with different colours and font](ReadMeImages/WireframeAlternative.png)
+
+I changed the colour scheme from shades of orange to shades of blue. I chose a really light blue, a medium-light blue, and a darker blue. Most of my text will be in the really light blue, contrasted by the medium-light blue as its background. The darker blue will be used as an outline, to contrast with the really-light blue background.
+
+The buttons however, will have the text in black, the background in really-light blue, and the border as normal. Using this colour scheme, the user can easily distinguish buttons from normal text boxes. Using a similar border colour will make the website's buttons feel more connected with the buttons and the text boxes.
+
+All of the font was also adapted to "Georgia". This font was chosen to make the website feel more professional. The arrangement of the pages is the same as last week's, because other iterations I tried, the website's information did not flow.
