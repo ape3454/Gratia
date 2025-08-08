@@ -34,3 +34,10 @@ I changed the colour scheme from shades of orange to shades of blue. I chose a r
 The buttons however, will have the text in black, the background in really-light blue, and the border as normal. Using this colour scheme, the user can easily distinguish buttons from normal text boxes. Using a similar border colour will make the website's buttons feel more connected with the buttons and the text boxes.
 
 All of the font was also adapted to "Georgia". This font was chosen to make the website feel more professional. The arrangement of the pages is the same as last week's, because other iterations I tried, the website's information did not flow.
+
+| Changes | Reasoning |
+| ------- | --------- |
+| Colour Palette | The shade of blue is very light makes the website feel relaxing and it looks good |
+| Text | Changed font to "Georgia", it is a pleasant and professional font. The colour is in a lighter blue, which looks good and contrast with the box background colour. |
+| Buttons | Their font is also changed to "Georgia". The font colour of the buttons are set to black, to accentuate the importance of this thing. |
+| Style | Contrast between buttons and text helps the reader differentiate between the both easier. Rearranging colour schemes makes them look different, so the mind recognises it is not text but a button, and vice versa. |
