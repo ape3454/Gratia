@@ -155,7 +155,7 @@ There exists two main databases that exist within the website: Users Database, a
 
 ### Example SQL Queries
 
-The results to the following SQL Queries are [here](...)
+The results to the following SQL Queries are [here](https://schoolsnsw-my.sharepoint.com/:x:/g/personal/kai_chen3_education_nsw_gov_au/EQJ_SgqyaH5PnRy28wqDa70BHPOA8OdEnBo3d1rIPg7j2w?e=yJeMJ1&nav=MTVfe0ZERDFGMTMyLTMwNzAtNDE5OS04QUY0LUVBNTg3MjdCMDJBOH0)
 
 1. Filtering struggling users
 ```
