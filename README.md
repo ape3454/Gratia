@@ -155,15 +155,17 @@ There exists two main databases that exist within the website: Users Database, a
 
 ### Example SQL Queries
 
+The results to the following SQL Queries are [here](...)
+
 1. Filtering struggling users
 ```
 SELECT
      ID,
-     First_Name + ' ' + Last_Name AS Name
+     [First Name] + ' ' + [Last Name] AS Name
 FROM
      Users
 WHERE
-     Struggling = 'Yes'
+     Struggling = 'TRUE'
 ORDER BY
      ID ASC;
 ```
@@ -175,5 +177,51 @@ SELECT
 FROM
      Users
 WHERE
-     City = 'New York'
+     City = 'New York';
+```
+
+3. Filtering who can donate food
+```
+SELECT
+     ID,
+     [First Name] + ' ' + [Last Name] AS Name,
+     [Potential Donations]
+FROM
+     Users
+WHERE
+     [Potential Donations] = 'Food%'
+ORDER BY
+     [Potential Donations];
+```
+
+4. Filtering unique donors
+```
+SELECT
+     ID,
+     [First Name] + ' ' + [Last Name] AS Name,
+     COUNT([Donation ID]) AS Donations
+FROM
+     Users
+INNER JOIN
+     Donation ON Users.ID = Donation.[Donor ID]
+GROUP BY
+     ID,
+     [First Name],
+     [Last Name];
+```
+
+5. Inventory of Recipients from donations
+```
+SELECT
+     ID,
+     [First Name] + ' ' + [Last Name] AS Name,
+     GROUP_CONCAT(Item) AS [Received Items]
+FROM
+     Users
+INNER JOIN
+     Donation ON Users.ID = Donation.[Donor ID]
+GROUP BY
+     ID,
+     [First Name],
+     [Last Name];
 ```
