@@ -18,7 +18,7 @@ This website is for the public to officially sign up to a community run charity 
 
 ### Wireframe
 
-![Wireframe of website](ReadMeImages/Wireframe.png)
+![Wireframe of website](static/images/ReadMeImages/Wireframe.png)
 
 The image includes several pages, including a Landing Page(top left), Home Page(bottom right), and Donate Page(bottom left).
 
@@ -34,7 +34,7 @@ In the home page, there is a 'Donate' button which leads to a donate page, which
 
 ### Experimentation - Alternate Wireframe
 
-![Alternative wireframe of website with different colours and font](ReadMeImages/WireframeAlternative.png)
+![Alternative wireframe of website with different colours and font](static/images/ReadMeImages/WireframeAlternative.png)
 
 I changed the colour scheme from shades of orange to shades of blue. I chose a really light blue, a medium-light blue, and a darker blue. Most of my text will be in the really light blue, contrasted by the medium-light blue as its background. The darker blue will be used as an outline, to contrast with the really-light blue background.
 
@@ -55,7 +55,7 @@ All of the font was also adapted to "Georgia". This font was chosen to make the 
 
 #### Flowchart
 
-![Diagram of how the donation feature will work](ReadMeImages/DonationProcessFlowchart.png)
+![Diagram of how the donation feature will work](static/images/ReadMeImages/DonationProcessFlowchart.png)
 
 The donation process will start with the code declaring two variables: the user's location, and the donated object. The user's location will be taken from a user database, which is collected during the sign up process. After this, the user will be prompted about the object they plan to donate. From here, the system will create two lists: nearby_locations, and suitable_locations. nearby_locations will be taken from a list of locations closest to the user's current location, while suitable_locations will be empty for now.
 
@@ -117,9 +117,9 @@ Priority: Medium-High
 
 ## Week 5, 18/08/25 - 24/08/25
 
-### Github Extensions
+### Visual Studio Extensions
 
-Due to unexpected technical difficulties, installation of github extensions has been delayed until the following week.
+Due to unexpected technical difficulties, installation of Visual Studio extensions has been delayed until the following week.
 
 ### Databasing
 
@@ -225,3 +225,15 @@ GROUP BY
      [First Name],
      [Last Name];
 ```
+
+## Week 7, 01/09/25 - 05/09/25
+
+### Visual Studio Extensions
+
+Installation of SQLite and SQL Server Compact Toolbox now allows databasing in Visual Studios. <br>
+Gitbash has been installed with the use of an extension. It was downloaded with Visual Studio's python support. <br>
+Line endings is part of Visual Studio in the settings.
+
+### Databasing
+
+Both Donation and Users databases have been implemented into the repository.
