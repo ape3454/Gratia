@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <script async src="static/js/app.js"></script>
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="static/images/WebsiteImages/AppIcon.png" />
+</head>
+
+<body>
+    <main>
+        <!-- Top Menu Bar -->
+        {% include "menu.html" %}
+        <hr>
+        <!-- Page Content -->
+        {% block content %}
+        {% endblock %}
+
+    </main>
+    <!-- Footer Bar -->
+    <footer>
+        {% include "footer.html" %}
+    </footer>
+    <script src="static/js/app.js"></script>
+</body>

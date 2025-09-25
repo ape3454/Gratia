@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\database"
+    "\\databases",
+    "\\Gratia",
+    "\\static",
+    "\\static\\images",
+    "\\static\\images\\WebsiteImages",
+    "\\static\\js",
+    "\\templates",
+    "\\templates\\layout.html",
+    "\\templates\\partials"
   ],
-  "SelectedNode": "\\Gratia.sln",
+  "SelectedNode": "\\main.py",
   "PreviewInSolutionExplorer": false
 }

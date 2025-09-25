@@ -237,3 +237,21 @@ Line endings is part of Visual Studio in the settings.
 ### Databasing
 
 Both Donation and Users databases have been implemented into the repository.
+
+## Week 8, 08/09/25 - 12/09/25
+
+### Webpage
+
+The first page is partly developed. Parts of the code are derived from an online tutorial. A logo and an app icon has been designed. Website has run for the first time.
+
+## Week 9, 15/09/25 - 19/09/25
+
+### Webpage
+
+The first page has been fully developed. The page is separated into two columns, and a button in the center underneath the columns.
+
+## Week 10, 22/09/25 - 26/09/25
+
+### Webpage
+
+The about us and contact us page has been designed. A footer has been designed at the bottom. More pages are being planned. Start of Javascript code.
