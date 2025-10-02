@@ -21,6 +21,132 @@ main {
     text-align:center;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: auto;
+    padding: 1rem 0;
+    min-height: 21rem;
+}
+
+.bubble {
+    border: 5px solid #0F8B8D;
+    border-radius: 7px;
+}
+
+div .bubble {
+    background: #5C9AFF;
+    color: #D7F1EB;
+}
+
+
+
+.landing {
+    padding: 0px;
+}
+
+.landing ul li#image {
+    
+    height: 30rem;
+}
+
+.landing ul li#image img {
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden;
+}
+
+.landing ul li div {
+    position: absolute;
+    inset-inline-start: 5rem;
+    inset-block-start: 17rem;
+    color: black;
+    width: 20rem;
+}
+
+.landing a {
+    position: absolute;
+    inset-inline-start: 9rem;
+    inset-block-start: 27rem;
+    font-size: 1.4rem;
+    padding: 2px 10px;
+}
+
+.landing ul.subinfo li {
+    justify-content: center;
+}
+
+.landing ul.subinfo li p {
+    width: 80%;
+}
+
+.landing ul.subinfo li p {
+    font-size: 20px;
+}
+
+
+
+.signin {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin div {
+    width: 100%;
+    min-height: 20rem;
+    padding: 0 2rem;
+}
+
+.signin div div {
+    min-height: 20rem;
+    width: 80%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.signin div h1 {
+    height: 5rem;
+    align-content: center;
+}
+
+.signin div ul {
+    
+}
+
+.signin div ul:not(.buttons) li {
+    display: block;
+    padding: 5px 0;
+    text-align: left;
+}
+
+.signin div li input {
+    background-color: aliceblue;
+    border: 2px solid #393b45;
+    border-radius: 3px;
+    color: aliceblue;
+}
+
+.signin ul.buttons {
+    margin-bottom: 2rem;
+    display: inline-flex;
+}
+
+.signin div button {
+    align-self: start;
+    border: 3px solid #020202;
+    border-radius: 7px;
+    padding: 3px;
+    background-color: aliceblue;
+    margin-right: 1rem;
+}
+
+
+
+
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -97,42 +223,23 @@ hr {
     margin-bottom: 10px;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin: auto;
-    padding: 1rem 0;
-    min-height: 21rem;
-}
-
-.bubble {
-    border: 5px solid #0F8B8D;
-    border-radius: 7px;
-}
-
-div .bubble {
-    background: #5C9AFF;
-    color: #D7F1EB;
-}
-
-div ul li ul {
+div.home ul li ul {
     display: inline-flex;
     justify-content: space-between;
 }
 
-div ul li {
+div.home ul li {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
 }
 
-div ul li {
+div.home ul li {
     justify-content: space-between;
 }
 
-div ul li ul li> * {
+div.home ul li ul li> * {
     height: 2.7rem;
     padding: 2px inherit;
     align-items: center;

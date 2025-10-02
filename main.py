@@ -10,7 +10,7 @@ app = Flask(__name__)
 #--- --- --- --- --- --- --- --- --- --- --- ---
 # Landing
 
-@app.route('/landing.html', methods=['GET'])
+@app.route('/', methods=['GET'])
 def landing():
     return render_template('/landing.html')
 
@@ -18,7 +18,6 @@ def landing():
 # Home
 
 @app.route('/home', methods=['GET'])
-@app.route('/', methods=['POST', 'GET'])
 def home():
     return render_template('/home.html')
 
@@ -26,7 +25,6 @@ def home():
 # Contact
 
 @app.route('/contact_us', methods=['GET'])
-@app.route('/', methods=['POST', 'GET'])
 def contact():
     return render_template('/contact.html')
 
@@ -34,7 +32,6 @@ def contact():
 # About Us
 
 @app.route('/about_us', methods=['GET'])
-@app.route('/', methods=['POST', 'GET'])
 def about():
     return render_template('/about.html')
 
@@ -45,12 +42,15 @@ def about():
 # Sign Up/Sign In
 
 @app.route('/signin', methods=['GET'])
-@app.route('/', methods=['POST', 'GET'])
 def signin():
     return render_template('/signin.html')
 
 #-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 # Profile
+
+@app.route('/profile', methods=['GET'])
+def profile():
+    return render_template('/profile.html')
 
 
 if __name__ == '__main__':

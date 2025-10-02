@@ -1,7 +1,29 @@
 {% extends 'layout.html' %} {% block content %}
 
 <div class="container signin">
-
+    <div class="bubble">
+        <div>
+            <h1>Sign In/Sign Up</h1>
+            <ul>
+                <li>
+                    <label for="email">Email:</label><br>
+                    <input type="text" name="email" id="email" size="30"/>
+                </li>
+                <li>
+                    <label for="password">Password:</label><br>
+                    <input type="password" name="password" id="password" size="30"/>
+                </li>
+            </ul>
+            <ul class="buttons">
+                <li>
+                    <button id="submit">Sign In</button>
+                </li>
+                <li>
+                    <button id="newacc">Create Account</button>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
