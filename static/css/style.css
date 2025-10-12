@@ -47,14 +47,14 @@ div .bubble {
 }
 
 .landing ul li#image {
-    
     height: 30rem;
+    border: 0px solid;
+    overflow: hidden;
 }
 
 .landing ul li#image img {
     object-fit: cover;
     width: 100%;
-    overflow: hidden;
 }
 
 .landing ul li div {
@@ -79,70 +79,89 @@ div .bubble {
 
 .landing ul.subinfo li p {
     width: 80%;
-}
-
-.landing ul.subinfo li p {
     font-size: 20px;
 }
 
 
 
-.signin {
+.login {
     width: 60%;
     justify-content: center;
     align-items: center;
 }
 
-.signin div {
+.login div {
     width: 100%;
     min-height: 20rem;
     padding: 0 2rem;
 }
 
-.signin div div {
+.login div form {
     min-height: 20rem;
     width: 80%;
     display: inline-flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-top: 20px;
 }
 
-.signin div h1 {
+.login div h1 {
     height: 5rem;
     align-content: center;
 }
 
-.signin div ul {
+.login div ul {
+    height: stretch;
     
 }
 
-.signin div ul:not(.buttons) li {
-    display: block;
-    padding: 5px 0;
-    text-align: left;
+.login div ul li:not(.hidden) {
+    display: flex;
+    padding: 1rem 0;
+    width: 90%;
+    justify-content: space-between;
+    justify-self: center;
 }
 
-.signin div li input {
+.login div li input {
     background-color: aliceblue;
     border: 2px solid #393b45;
     border-radius: 3px;
-    color: aliceblue;
+    color: black;
+    width: 13rem;
 }
 
-.signin ul.buttons {
-    margin-bottom: 2rem;
-    display: inline-flex;
+.login ul li.buttons {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
 }
 
-.signin div button {
+.login div li.buttons > *{
     align-self: start;
     border: 3px solid #020202;
     border-radius: 7px;
     padding: 3px;
     background-color: aliceblue;
-    margin-right: 1rem;
+    width: 42%;
+    text-decoration-line: none;
+    color: black;
+    font-size: 14px;
+    font-family: "Nunito", sans-serif;
 }
 
+.register #contact {
+    flex-wrap: wrap;
+}
+
+.register #contact h3 {
+    width: 100%;
+    text-align: start;
+}
+
+.register #struggling input {
+    margin-right: 9.5rem;
+}
 
 
 
@@ -223,23 +242,27 @@ hr {
     margin-bottom: 10px;
 }
 
-div.home ul li ul {
+.home p.jsoncommunication {
+    display: none;
+}
+
+.home ul li ul {
     display: inline-flex;
     justify-content: space-between;
 }
 
-div.home ul li {
+.home ul li {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
 }
 
-div.home ul li {
+.home ul li {
     justify-content: space-between;
 }
 
-div.home ul li ul li> * {
+.home ul li ul li> * {
     height: 2.7rem;
     padding: 2px inherit;
     align-items: center;

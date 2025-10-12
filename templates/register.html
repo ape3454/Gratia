@@ -1,0 +1,70 @@
+﻿{% extends 'layout.html' %} {% block content %}
+
+<div class="container login register">
+    <div class="bubble">
+        <form method="POST" action="">
+            <h1>Register Account</h1>
+            <ul>
+                <li class="hidden">
+                    {{ form.hidden_tag() }}
+                </li>
+                <li>
+                    <label for="first_name">First Name:</label>
+                    {{ form.first_name }}
+                </li>
+                <li>
+                    <label for="last_name">Last Name (Optional):</label>
+                    {{ form.last_name }}
+                </li>
+                <li>
+                    <label for="password">Create New Password:</label>
+                    {{ form.password }}
+                </li>
+                <li>
+                    <label for="confirm">Repeat Password:</label>
+                    {{ form.confirm }}
+                </li>
+                <li id="contact">
+                    <h3>Contact:</h3>
+                    <ul>
+                        <li>
+                            <label for="email">Email:</label>
+                            {{ form.email }}
+                        </li>
+                        <li>
+                            <label for="phone">Phone Number:</label>
+                            {{ form.phone }}
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="city">City:</label>
+                    {{ form.city }}
+                </li>
+                <li>
+                    <label for="suburb">Suburb (Optional):</label>
+                    {{ form.suburb }}
+                </li>
+                <li>
+                    <label for="donations">What can you donate?</label>
+                    {{ form.donations }}
+                </li>
+                <li>
+                    <label for="skills">What are your skills?</label>
+                    {{ form.skills }}
+                </li>
+                <li id="struggling">
+                    <label for="struggling">Are you financially unstable?</label>
+                    {{ form.struggling }}
+                </li>
+                <li class="buttons">
+                    {{ form.submit }}
+                    {{ form.errors }}
+                    <a href="login">Log In</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
