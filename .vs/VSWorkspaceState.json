@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\databases",
-    "\\Gratia",
     "\\static",
     "\\static\\images",
     "\\static\\images\\WebsiteImages",
+    "\\static\\images\\WebsiteImages\\LinkIcons",
     "\\static\\js",
     "\\templates",
     "\\templates\\layout.html",

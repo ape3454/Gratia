@@ -1,0 +1,28 @@
+{% extends 'layout.html' %} {% block content %}
+
+<div class="container login">
+    <div class="bubble">
+        <form method="POST" action="">
+            <h1>Log In</h1>
+            <ul>
+                <li class="hidden">
+                    {{ form.hidden_tag() }}
+                </li>
+                <li>
+                    <label for="required">Email or Phone Number:</label>
+                    {{ form.required }}
+                </li>
+                <li>
+                    <label for="password">Password:</label>
+                    {{ form.password }}
+                </li>
+                <li class="buttons">
+                    {{ form.submit }}
+                    <a href="register">Create New Account</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

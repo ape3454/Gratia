@@ -6,6 +6,11 @@
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+    text-decoration-line: none;
+}
+
+.hidden {
+    display: none;
 }
 
 body {
@@ -20,6 +25,154 @@ main {
     padding: 0.5rem 1rem;
     text-align:center;
 }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: auto;
+    padding: 1rem 0;
+    min-height: 21rem;
+}
+
+.bubble {
+    border: 5px solid #0F8B8D;
+    border-radius: 7px;
+}
+
+div .bubble {
+    background: #5C9AFF;
+    color: #D7F1EB;
+}
+
+
+
+.landing {
+    padding: 0px;
+}
+
+.landing ul li#image {
+    height: 30rem;
+    border: 0px solid;
+    overflow: hidden;
+}
+
+.landing ul li#image img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.landing ul li div {
+    position: absolute;
+    inset-inline-start: 5rem;
+    inset-block-start: 17rem;
+    color: black;
+    width: 20rem;
+}
+
+.landing a {
+    position: absolute;
+    inset-inline-start: 9rem;
+    inset-block-start: 27rem;
+    font-size: 1.4rem;
+    padding: 2px 10px;
+}
+
+.landing ul.subinfo li {
+    justify-content: center;
+    justify-self: center;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.landing ul.subinfo li p {
+    font-size: 20px;
+}
+
+
+
+.login {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.login div {
+    width: 100%;
+    min-height: 20rem;
+    padding: 0 2rem;
+}
+
+.login div form {
+    min-height: 20rem;
+    width: 80%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+.login div h1 {
+    height: 5rem;
+    align-content: center;
+}
+
+.login div ul {
+    height: stretch;
+    
+}
+
+.login div ul li:not(.hidden) {
+    display: flex;
+    padding: 1rem 0;
+    width: 90%;
+    justify-content: space-between;
+    justify-self: center;
+}
+
+form input, form button, .profile a#logout {
+    background-color: aliceblue;
+    border: 2px solid #393b45;
+    border-radius: 3px;
+    color: black;
+    width: 13rem;
+    font-family: "Nunito", sans-serif;
+}
+
+.login ul li.buttons {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login div li.buttons > *{
+    align-self: start;
+    border: 3px solid #020202;
+    border-radius: 7px;
+    padding: 3px;
+    background-color: aliceblue;
+    width: 42%;
+    text-decoration-line: none;
+    color: black;
+    font-size: 14px;
+    font-family: "Nunito", sans-serif;
+}
+
+.register #contact {
+    flex-wrap: wrap;
+}
+
+.register #contact h3 {
+    width: 100%;
+    text-align: start;
+}
+
+.register #struggling input {
+    margin-right: 9.5rem;
+}
+
+
+
 
 nav {
     display: flex;
@@ -50,7 +203,7 @@ nav ul.topnav {
     height: 2.6rem;
 }
 
-nav ul li a, body main div.donate {
+nav ul li a, body main div.donatebutton {
     text-transform: uppercase;
     color: #393b45;
     padding: 5px 15%;
@@ -97,42 +250,23 @@ hr {
     margin-bottom: 10px;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin: auto;
-    padding: 1rem 0;
-    min-height: 21rem;
+p#flaskcommunication {
+    display: none;
 }
 
-.bubble {
-    border: 5px solid #0F8B8D;
-    border-radius: 7px;
-}
-
-div .bubble {
-    background: #5C9AFF;
-    color: #D7F1EB;
-}
-
-div ul li ul {
+.home ul li ul, .donate ul li ul{
     display: inline-flex;
     justify-content: space-between;
 }
 
-div ul li {
+.home ul li {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
 }
 
-div ul li {
-    justify-content: space-between;
-}
-
-div ul li ul li> * {
+.home ul li ul li> *, .donate ul li ul li> * {
     height: 2.7rem;
     padding: 2px inherit;
     align-items: center;
@@ -150,10 +284,6 @@ div ul li ul li> * {
 
 #location li ul li a {
     width: 40%;
-}
-
-div h1,h2,h3,p {
-
 }
 
 a.button {
@@ -174,6 +304,7 @@ a.button.page {
 #location li, li ul {
     justify-content: space-between;
     width: 100%;
+    display: flex;
 }
 
 #location > * {
@@ -202,6 +333,7 @@ a.button.page {
 #stats .info {
     flex-wrap: wrap;
     justify-content: start;
+    padding-left: 7px;
 }
 
 #stats .info > * {
@@ -212,24 +344,184 @@ a.button.page {
 }
 
 #stats li:not(.nested) {
-    width: 90%;
+    width: 100%;
     margin-bottom: 1rem;
-    padding: 1px;
-
 }
 
-.donate {
+.donatebutton {
     width: 30%;
     display: flex;
     margin: auto;
     justify-content: center;
 }
 
-.donate a {
+.donatebutton a {
     font-size: 2.5rem;
     font-weight: bold;
     color: inherit;
 }
+.donate {
+    width: 100%;
+}
+
+.donate ul#leftpanel {
+    width: 40%;
+}
+
+.donate ul li ul {
+    width: 100%;
+    display: block;
+}
+
+.donate ul li ul:not(.activedonation) li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.donate h2.bubble {
+    width: 50%;
+}
+
+.donate a.bubble {
+    width: 40%;
+}
+
+#leftpanel li#asklist , #asklist > li.gcell{
+    display: block;
+}
+
+#asklist {
+    min-height: 14.6rem;
+}
+
+#asklist .activedonation:has(p) {
+    width: 90%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1.8fr 3fr 3fr 1.4fr );
+    row-gap: 0px;
+    margin-bottom: 1.5rem;
+}
+
+#asklist .activedonation li {
+    
+}
+
+#asklist .activedonation li.gcell > * {
+    border: 2px solid black;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+
+
+#asklist ul li.gcell h3 {
+    justify-self: center;
+    text-align: center;
+    padding: 0px 5px;
+}
+
+.donate form {
+    width: 50%;
+}
+
+.donate form h1 {
+    padding-top: 5px;
+    padding-bottom: 1rem;
+}
+
+.donate form ul li {
+    margin: 1.2rem 0;
+    width: 80%;
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.donate form label {
+    font-size: 1.1rem;
+}
+
+.donate form input {
+    font-size: 0.9rem;
+}
+
+.donate form ul li.buttons {
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+    width: 20%;
+}
+
+div.profile {
+    display: block;
+    width: 70%;
+}
+
+.profile div > * {
+    padding: 10px 0;
+}
+
+.profile form {
+    width: 70%;
+    margin: auto;
+}
+
+.profile form ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile form ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile form ul li.changepassword {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile li.changepassword > * {
+    margin: 5px 0;
+}
+
+.profile li.changepassword button {
+    width: 30%;
+}
+
+.profile button {
+    width: 30%;
+    margin: auto;
+}
+
+.profile input[type="submit"] {
+    justify-self: center;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.profile li.buttons {
+    display: block;
+}
+
+.profile form ul li:has(label) > * {
+    width: 100%;
+    margin: 5px 0;
+    justify-self: center;
+}
+
+.profile form .changepassword .password {
+    width: 90%;
+}
+
+.profile .password ul li > * {
+    width: 45%;
+    margin: 10px 5px;
+}
+
 
 footer {
     background: #4b7ed1;
@@ -265,25 +557,15 @@ footer {
     height: 2rem;
 }
 
-.contact ul {
+.contact ul, .about ul, .donaproc ul {
     justify-content: center;
     margin: 0px 20%;
     width: 60%;
     display: block;
 }
 
-.contact ul li {
-    justify-content: center;
-}
-
-.about ul {
-    width: 60%;
-    margin: 0px 20%;
-}
-
-.about ul li{
+.contact ul li, .about ul li, .donaproc ul li {
     justify-content: center;
     align-content: center;
     display: block;
-
 }

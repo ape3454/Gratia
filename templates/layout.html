@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
     <link rel="stylesheet" href="static/css/style.css" />
     <script async src="static/js/app.js"></script>
-    <title>Home</title>
+    <title>Gratia</title>
     <link rel="icon" type="image/x-icon" href="static/images/WebsiteImages/AppIcon.png" />
 </head>
 
@@ -16,13 +16,11 @@
         {% include "menu.html" %}
         <hr>
         <!-- Page Content -->
-        {% block content %}
-        {% endblock %}
-
+        {% block content %}{% endblock %}
     </main>
     <!-- Footer Bar -->
     <footer>
         {% include "footer.html" %}
     </footer>
-    <script src="static/js/app.js"></script>
+    <p id="flaskcommunication">{% if comms is defined %}{{ comms[0] }}{% endif %}</p>
 </body>

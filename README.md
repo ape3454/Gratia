@@ -255,3 +255,55 @@ The first page has been fully developed. The page is separated into two columns,
 ### Webpage
 
 The about us and contact us page has been designed. A footer has been designed at the bottom. More pages are being planned. Start of Javascript code.
+
+## Holiday Week 1, 2/10/25
+
+### Webpage
+
+The sign in page has been designed and has been linked to main.py. App.js now stores the active user's details, and changes the menu buttons to reflect whether the user is signed in.
+The landing page has also been designed, such that there is a button that links the user to the sign in page. The landing page also has our slogan "For the Streets, From our Hearts".
+
+## Holiday Week 2, 12/10/25
+
+### Webpage
+
+I followed a tutorial for log in and registration pages and forms, as well as a structure for coding the forms in main.py.
+The sign in page is now called the log in page, is now more refined, and uses python's 'wtforms' module that helps create forms in web development.
+The register page uses a similar structure to log in page, but includes more fields for collecting data from the user.
+Main.py now includes a lot more code. Main.py incorporates most modules of wtforms, and has validators for each field. The 'requiredif' validator was created and code validates whether the email or phone number already exists in the 'Users' database.
+Main.py also interacts with 'Users' database, to add new users to the database. Main.py also stores the user in python's 'session['user']' and 'session['id'].
+Main.py now returns a flask variable to home template that stores the user's information and then app.js finds the element and reads the text, and decodes it into a list that contains the user's information.
+I attempted to follow tutorial on service worker however it does not work.
+Minor adjustments to other pages.
+
+## First Week Back / Final Week, 13/10/25 - 16/10/25
+
+### Webpage
+
+The flask variable that was returned to home template is now returned to layout.html because app.js was returning error that the variable did not exist in other pages.
+The home page now includes data from 'Users' database that are the user's statistics that are returned in main.py.
+There is now a profile page, a donation process page, and a donate page. The profile page is able to change the user's details. There is a 'Change Password' button in profile page to reveal a hidden div element that has input that the user can change. The other input elements in profile page also have placeholders that show their current user details. If no details are entered, that respective part of the user's data does not change.
+The profile page also contains the logout button that logs the user out, and delete's session['user'] and session['id'] in main.py, and sessionStorage('account') in app.js.
+The donation process page is a short description that describes the donation process led by volunteer donors.
+The donate page has two parts: a list that shows the user's active donations, and a donation form to submit donations into the database. The donation form is returned from main.py using wtforms. The active donations list shows the user's active donations that are retrieved from the 'Donatelist' database.
+
+
+
+
+# Instructions On Loading The Page
+
+1. Download repository in Github. Open Visual Studio or Visual Studio Code.
+2. Run main.py in powershell.
+3. Copy an ip address in powershell and run on Google Chrome. e.g. Running on **http://127.0.0.1:5000**.
+
+### For Running main.py in Visual Studio:
+
+1. Open downloaded repository in Visual Studio.
+2. Open Developer Powershell tab by press ctr + `.
+3. Run main.py by typing, "python main.py"
+
+
+# Tutorials used in this project:
+
+1. [Mr Ben Jones from Tempe High School's website development tutorial](https://schoolsnsw-my.sharepoint.com/:w:/g/personal/kai_chen3_education_nsw_gov_au/EVPvThMb5GFEv644b3tAk1cBF7rmC3wRqv-a8M87LQw_vA?e=UYHWf0)
+2. [Python Flask Authentication Tutorial - Learn Flask Login by Arpan Neupane](https://www.youtube.com/watch?v=71EU8gnZqZQ)
