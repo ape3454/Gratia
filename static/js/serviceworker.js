@@ -22,7 +22,7 @@ self.addEventListener("install", (installEvt) => {
     )
 })
 
-self.addEventListener("activate", function (evt) {
+self.addEventListener("activate", function(evt) {
     evt.waitUntil(
         caches
         .keys()
@@ -30,7 +30,7 @@ self.addEventListener("activate", function (evt) {
             return Promise.all(
                 keyList.map((key) => {
                     if (key === CATALOGUE_ASSETS) {
-                        console.log("Removed old cache from", key);
+                        console.log("Removed old cache from ", key);
                         return caches.delete(key);
                     }
                 })
@@ -40,7 +40,7 @@ self.addEventListener("activate", function (evt) {
     );
 });
 
-self.addEventListener("fetch", function (evt) {
+self.addEventListener("fetch", function(evt) {
     evt.respondWith(
         fetch(evt.request).catch(() => {
             return caches.open(CATALOGUE_ASSETS).then((cache) => {

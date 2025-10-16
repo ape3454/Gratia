@@ -1,0 +1,85 @@
+{% extends 'layout.html' %} {% block content %}
+
+<div class="container profile">
+    <div class="bubble">
+        <h2>{{ comms[0][1] }}'s Details</h2>
+        <form method="POST" action="">
+            <ul>
+                <li class="hidden">
+                    {{ form.hidden_tag() }}
+                </li>
+                <li>
+                    <label for="first_name">First Name:</label>
+                    {{ form.first_name }}
+                </li>
+                <li>
+                    <label for="last_name">Last Name (Optional):</label>
+                    {{ form.last_name }}
+                </li>
+                <li class="changepassword">
+                    <label for="button">Change Your Password</label>
+                    <button type="button" id="button" name="button">Change Password</button>
+                    <div class="bubble hidden password">
+                        <h2>Change Password</h2>
+                        <ul>
+                            <li class="changepassword">
+                                <label for="current_password">Current Password:</label>
+                                {{ form.current_password }}
+                            </li>
+                            <li class="changepassword">
+                                <label for="new_password">New Password:</label>
+                                {{ form.new_password }}
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h3>Contact:</h3>
+                </li>
+                <li id="contact">
+                    <ul>
+                        <li>
+                            <label for="email">Email:</label>
+                            {{ form.email }}
+                        </li>
+                        <li>
+                            <label for="phone">Phone Number:</label>
+                            {{ form.phone }}
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="city">City:</label>
+                    {{ form.city }}
+                </li>
+                <li>
+                    <label for="suburb">Suburb (Optional):</label>
+                    {{ form.suburb }}
+                </li>
+                <li>
+                    <label for="donations">What can you donate?</label>
+                    {{ form.donations }}
+                </li>
+                <li>
+                    <label for="skills">What are your skills?</label>
+                    {{ form.skills }}
+                </li>
+                <li id="struggling">
+                    <label for="struggling">Are you financially unstable?</label>
+                    <button type="button" onclick="changeStatus">Change Status</button>
+                </li>
+                <li class="buttons">
+                    {{ form.submit }}
+                </li>
+                <li>
+                    {{ form.errors }}
+                </li>
+                <li>
+                    <a id="logout" href="logout">Log Out</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

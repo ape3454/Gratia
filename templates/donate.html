@@ -1,0 +1,59 @@
+{% extends 'layout.html' %} {% block content %}
+
+<div class="container donate">
+    <ul id="leftpanel">
+        <li id="location title">
+            <ul>
+                <li>
+                    <h2 class="bubble">{{ user[6] + ", " + user[7] }}</h2> <!-- javascript location -->
+                    <a href="profile" class="button page bubble">Change Location</a>
+                </li>
+            </ul>
+        </li>
+        <li class="bubble" id="asklist">
+            <h2>Your Active Donations</h2>
+            <ul class="activedonation">
+                {% for donation in activedonations %}
+                    <li class="gcell">
+                        <h3>{{ donation[3] }}</h3>
+                    </li>
+                    <li class="gcell">
+                        <p>{{ donation[2] }}</p>
+                    </li>
+                    <li class="gcell">
+                        <p>{{ donation[1] }}</p>
+                    </li>
+                    <li class="gcell">
+                        <p>{{ donation[4] }}</p>
+                    </li>
+                {% else %}
+                    <li>
+                        <h3>You have no active donations. Donate something!</h3>
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+    <form method="POST" action=""class="bubble">
+        <h1>What are you donating?</h1>
+        <ul>
+            <li>
+                <label for="item">What item are you donating?</label>
+                {{ form.item }}
+            </li>
+            <li>
+                <label for="location">Choose a location close to your location.</label>
+                {{ form.dropoff }}
+            </li>
+            <li>
+                <label for="date">When will you drop off the item?</label>
+                {{ form.date }}
+            </li>
+            <li class="buttons">
+                {{ form.submit }}
+            </li>
+        </ul>
+    </form>
+</div>
+
+{% endblock %}

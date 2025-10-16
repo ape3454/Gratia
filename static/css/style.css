@@ -6,6 +6,11 @@
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+    text-decoration-line: none;
+}
+
+.hidden {
+    display: none;
 }
 
 body {
@@ -75,10 +80,12 @@ div .bubble {
 
 .landing ul.subinfo li {
     justify-content: center;
+    justify-self: center;
+    width: 80%;
+    margin-top: 20px;
 }
 
 .landing ul.subinfo li p {
-    width: 80%;
     font-size: 20px;
 }
 
@@ -123,12 +130,13 @@ div .bubble {
     justify-self: center;
 }
 
-.login div li input {
+form input, form button, .profile a#logout {
     background-color: aliceblue;
     border: 2px solid #393b45;
     border-radius: 3px;
     color: black;
     width: 13rem;
+    font-family: "Nunito", sans-serif;
 }
 
 .login ul li.buttons {
@@ -195,7 +203,7 @@ nav ul.topnav {
     height: 2.6rem;
 }
 
-nav ul li a, body main div.donate {
+nav ul li a, body main div.donatebutton {
     text-transform: uppercase;
     color: #393b45;
     padding: 5px 15%;
@@ -242,11 +250,11 @@ hr {
     margin-bottom: 10px;
 }
 
-.home p.jsoncommunication {
+p#flaskcommunication {
     display: none;
 }
 
-.home ul li ul {
+.home ul li ul, .donate ul li ul{
     display: inline-flex;
     justify-content: space-between;
 }
@@ -258,11 +266,7 @@ hr {
     margin-bottom: 20px;
 }
 
-.home ul li {
-    justify-content: space-between;
-}
-
-.home ul li ul li> * {
+.home ul li ul li> *, .donate ul li ul li> * {
     height: 2.7rem;
     padding: 2px inherit;
     align-items: center;
@@ -280,10 +284,6 @@ hr {
 
 #location li ul li a {
     width: 40%;
-}
-
-div h1,h2,h3,p {
-
 }
 
 a.button {
@@ -304,6 +304,7 @@ a.button.page {
 #location li, li ul {
     justify-content: space-between;
     width: 100%;
+    display: flex;
 }
 
 #location > * {
@@ -332,6 +333,7 @@ a.button.page {
 #stats .info {
     flex-wrap: wrap;
     justify-content: start;
+    padding-left: 7px;
 }
 
 #stats .info > * {
@@ -342,24 +344,184 @@ a.button.page {
 }
 
 #stats li:not(.nested) {
-    width: 90%;
+    width: 100%;
     margin-bottom: 1rem;
-    padding: 1px;
-
 }
 
-.donate {
+.donatebutton {
     width: 30%;
     display: flex;
     margin: auto;
     justify-content: center;
 }
 
-.donate a {
+.donatebutton a {
     font-size: 2.5rem;
     font-weight: bold;
     color: inherit;
 }
+.donate {
+    width: 100%;
+}
+
+.donate ul#leftpanel {
+    width: 40%;
+}
+
+.donate ul li ul {
+    width: 100%;
+    display: block;
+}
+
+.donate ul li ul:not(.activedonation) li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.donate h2.bubble {
+    width: 50%;
+}
+
+.donate a.bubble {
+    width: 40%;
+}
+
+#leftpanel li#asklist , #asklist > li.gcell{
+    display: block;
+}
+
+#asklist {
+    min-height: 14.6rem;
+}
+
+#asklist .activedonation:has(p) {
+    width: 90%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1.8fr 3fr 3fr 1.4fr );
+    row-gap: 0px;
+    margin-bottom: 1.5rem;
+}
+
+#asklist .activedonation li {
+    
+}
+
+#asklist .activedonation li.gcell > * {
+    border: 2px solid black;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+
+
+#asklist ul li.gcell h3 {
+    justify-self: center;
+    text-align: center;
+    padding: 0px 5px;
+}
+
+.donate form {
+    width: 50%;
+}
+
+.donate form h1 {
+    padding-top: 5px;
+    padding-bottom: 1rem;
+}
+
+.donate form ul li {
+    margin: 1.2rem 0;
+    width: 80%;
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.donate form label {
+    font-size: 1.1rem;
+}
+
+.donate form input {
+    font-size: 0.9rem;
+}
+
+.donate form ul li.buttons {
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+    width: 20%;
+}
+
+div.profile {
+    display: block;
+    width: 70%;
+}
+
+.profile div > * {
+    padding: 10px 0;
+}
+
+.profile form {
+    width: 70%;
+    margin: auto;
+}
+
+.profile form ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile form ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile form ul li.changepassword {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile li.changepassword > * {
+    margin: 5px 0;
+}
+
+.profile li.changepassword button {
+    width: 30%;
+}
+
+.profile button {
+    width: 30%;
+    margin: auto;
+}
+
+.profile input[type="submit"] {
+    justify-self: center;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.profile li.buttons {
+    display: block;
+}
+
+.profile form ul li:has(label) > * {
+    width: 100%;
+    margin: 5px 0;
+    justify-self: center;
+}
+
+.profile form .changepassword .password {
+    width: 90%;
+}
+
+.profile .password ul li > * {
+    width: 45%;
+    margin: 10px 5px;
+}
+
 
 footer {
     background: #4b7ed1;
@@ -395,25 +557,15 @@ footer {
     height: 2rem;
 }
 
-.contact ul {
+.contact ul, .about ul, .donaproc ul {
     justify-content: center;
     margin: 0px 20%;
     width: 60%;
     display: block;
 }
 
-.contact ul li {
-    justify-content: center;
-}
-
-.about ul {
-    width: 60%;
-    margin: 0px 20%;
-}
-
-.about ul li{
+.contact ul li, .about ul li, .donaproc ul li {
     justify-content: center;
     align-content: center;
     display: block;
-
 }
